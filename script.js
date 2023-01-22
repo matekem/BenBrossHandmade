@@ -1,11 +1,17 @@
 const toggleBtn = document.getElementById("toggleBtn")
 const navList = document.getElementById("navList")
+const topMenuLine = document.getElementById("menuTop")
+const midMenuLine = document.getElementById("menuMid")
+const bottomMenuLine = document.getElementById("menuBottom")
 
 toggleBtn.addEventListener("click", () =>{
    
     navList.classList.toggle("active")
-   
+    topMenuLine.classList.toggle("top-active")
+    midMenuLine.classList.toggle("mid-active")
+    bottomMenuLine.classList.toggle("bottom-active")
 })
+
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
