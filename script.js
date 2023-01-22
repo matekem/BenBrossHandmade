@@ -33,4 +33,11 @@ const swiper = new Swiper('.swiper', {
     scrollbar: {
       el: '.swiper-scrollbar',
     },
+
+    //Set delay between automatic slide changes
+    autoplay:{
+      delay: 2200,
+    },
   });
+
+  swiper.setTransition(swiper,2)

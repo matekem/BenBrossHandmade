@@ -58,6 +58,15 @@ html ,body {
     transition: all 0.3s;
     border-radius: 4px;
 }
+.menu-line-top{
+ width:12.5px
+}
+.menu-line-mid{
+
+}
+.menu-line-bottom{
+    width:12.5px
+}
 
 .menu{
     display: block;
@@ -71,17 +80,18 @@ html ,body {
     transition: all 0.3s;
 }
 .top-active{
-    transform: rotate(-225deg) translate(1.8px);
+    transform: rotate(44deg);
     padding: 0;
     margin: 0;
 }
 .mid-active{
-    transform: rotate(225deg) translate(1.8px);
+    transform: rotate(-44deg) translate(-2.5px);
     padding: 0;
     margin: 0;
 }
 .bottom-active{
-    display: none;
+    
+    transform: rotate(45deg) translate(9px) translateY(-4.5px);
     
 }
 @keyframes midFlyOut {
