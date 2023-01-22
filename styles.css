@@ -108,16 +108,17 @@ html ,body {
 }
 
 .active{
-    display: block;
+    
     transition: all 0.3s;
+    display: block;
 }
 
 
 
 .logo{
     width: 100%;
-    margin-left:10px;
-    margin-top: 10px;
+    margin-left:25px;
+    margin-top: 0px;
     transition: all 0.3s;
     mix-blend-mode: color-burn;
     
