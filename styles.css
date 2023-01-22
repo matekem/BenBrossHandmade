@@ -1,18 +1,18 @@
 html ,body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    width: 100vw;
-    overflow-x: hidden;
+        width: 100vw;
+        overflow-x: hidden;
 }
 
 .navbar{
     background-color: #ececec;
-    
     display:flex;
+    flex-direction: column;
     justify-content: space-around;
     font-size : 20px;
     align-items: center;
@@ -22,12 +22,24 @@ html ,body {
 .nav-list{
     list-style-type: none;
     color: black;
+    width: 100%;
+    text-align: center;    
+    padding-top: 0;
+    margin-top: 0;
+    display: none;
     
 }
 
 .nav-list,.list-item{
-    display: inline-block;
-    padding: 20px 10px;
+
+    display: block;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.list-item:active{
+    transform: scale(1.1,1.1);
+    transition: all 0.1s;
+    text-decoration: underline;
 }
 
 .navbar a{
@@ -45,7 +57,19 @@ html ,body {
     background-color: rgb(0, 0, 0);
     margin-bottom: 4px;
 }
+
 .menu{
+    display: block;
+    position: absolute;
+    right: 46px;
+    top: 46px;
+    transition: all 0.3s;
+}
+.menu:active{
+    transform: scale(1.2,1.2);
+    transition: all 0.3s;
+}
+.active{
     display: none;
     
 }
@@ -53,6 +77,9 @@ html ,body {
 
 
 .logo{
+    width: 100%;
+    margin-left:10px;
+    margin-top: 10px;
     
     mix-blend-mode: color-burn;
     
@@ -66,10 +93,15 @@ html ,body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    text-align: center;
+    padding: 10px;
+    padding-bottom:30px;
+    padding-top:1em;
     
 }
-
+.herotext{
+    width: 100%;
+}
 
 .herotext h1{
     font-size: 48px;
@@ -84,7 +116,7 @@ html ,body {
    margin-top :1px;
 }
 .herotext{
-    width: 30%;
+    width: 100%;
 }
 .herotext button{
     background-color:#00000000;
@@ -112,6 +144,16 @@ html ,body {
     padding-bottom: 100px;
     
 }
+.swiper-slide img{
+    width: 100%;
+    border-radius: 6px;
+    
+}
+.swiper{
+    margin-top:1em;
+    margin-bottom: 1em;
+    width:100%;
+}
 
 /*End of hero styling*/
 
@@ -123,45 +165,30 @@ html ,body {
     font-size: 32px;
     font-weight: 500;
 }
-.image-container p{
-    width:200px;
-    text-align: center;   
-}
 
-.images-second
-{
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    gap:20px;
-}
-.image-container img{
-    height:200px;
-    border-radius: 6px;
-    
-    width:200px;
-    
-}
 .second{
     display: flex;
     flex-direction: column;
     background-color: #ececec;
     color: black;
-    padding: 1em;
+    text-align: center;
+    font-size: 1.5em;
+    padding:0;
+    margin: 0;
 }
 
 .third{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #000000d3; 
-    padding-left: 300px;
-    padding-right:300px;    
-    padding-bottom: 100px;
+    padding:2em;
+    margin:0;
     border-top: 1px solid white;
 }
 .quote blockquote{
 text-align: left;
-font-size: 36px;
+font-size: 1.3rem;  
 font-weight: lighter;
 color: black;
 }
@@ -176,23 +203,15 @@ color: black;
 }
 .bottom-box{
     background-color: #ececec00;
-    padding: 8px 35px;
     font-size:18px;
     text-align: center;
-    
-    
-    
     transition: all 0.3s;
-    width: 80%;
-    margin-top: 150px;
-    margin-bottom: 0px;
-    
-    
-    
-    padding-left: 100px;
-    padding-right:100px;
-    padding-top: 60px;
-    padding-bottom: 30px;
+    width: 100%;
+    width: fit-content;
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
     
     
 }
@@ -201,13 +220,14 @@ color: black;
     margin:0px;
     font-weight: bold;
     color: white;
-    font-size: 30px;
+    font-size: 1.5em;
 }
 .bottom-box p{
     padding:0px;
-    margin:0px;
+    font-size: 1em;
+    margin: 1.2rem;
     color: white;
-    font-size: 18px;
+    
 }
 .bottom-box button{
     background-color:#00000000;
@@ -237,134 +257,8 @@ color: black;
     overflow: hidden;
 }
 
-@media screen and (max-width: 480px){
-    .navbar{
-        flex-direction: column;
-    }
-    .menu{
-        display: block;
-        position: absolute;
-        right: 46px;
-        top: 46px;
-        transition: all 0.3s;
-    }
-    .menu:active{
-        transform: scale(1.2,1.2);
-        transition: all 0.3s;
-    }
-    .nav-list,.list-item{
-        display: block;
-        padding: 10px;
-        transition: all 0.3s ease-in-out;
-        
-    }
-
-    .nav-list{
-        width: 100%;
-        text-align: center;    
-        padding-top: 0;
-        margin-top: 0;
+@media screen and (min-width: 769px) {
+    body{
         display: none;
-        
     }
-    .active{
-        display: block;
-        
-    }
-
-    .list-item:active{
-        transform: scale(1.1,1.1);
-        transition: all 0.1s;
-        text-decoration: underline;
-    }
-    .logo{
-        width: 100%;
-        margin-left:10px;
-        margin-top: 10px;
-    }
-
-    .herobox  {
-       text-align: center;
-       padding: 10px;
-       padding-bottom:30px;
-       padding-top:1em;
-
-    }
-    .herotext{
-        width: 100%;
-    }
-   
-    .second{
-        display: flex;
-        flex-direction: column;
-    }
-    .images-second{
-        display: flex;
-        flex-direction: column;
-    }
-    .image-container{
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        align-content: center;
-    }
-
-    .image-container > img{
-        
-       width: 100%;
-        
-        
-    }
-    .image-container p {
-        
-        width: auto;
-    }
-    .hero-img{
-        filter: brightness(75%);
-        margin-bottom: 1em;
-    }
-    .hero-img img{
-        width: 100%;
-        border-radius: 6px;
-    }
-    .swiper-slide img{
-        width: 100%;
-        border-radius: 6px;
-        
-    }
-    .swiper{
-        margin-top:1em;
-        margin-bottom: 1em;
-        width:100%;
-    }
-    .third{
-        padding:2em;
-        margin:0;
-    
-    }
-    .bottom-box{
-        width: fit-content;
-        margin: 0;
-        padding: 1em;
-        display: flex;
-        flex-direction: column;
-        
-    }
-    .bottom-box h3{
-        font-size: 1.5em;
-    }
-    .bottom-box p{
-        font-size: 1em;
-        margin: 1.2rem;
-    }
-
-    .quote blockquote{
-        font-size: 1.3rem;  
-        }
-        .second{
-            text-align: center;
-            font-size: 1.5em;
-            padding:0;
-            margin: 0;
-        }
 }
