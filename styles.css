@@ -1,4 +1,4 @@
- body {
+body {
     font-family: 'Raleway', sans-serif;
     
         margin: 0;
@@ -15,7 +15,7 @@
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    font-size : 20px;
+    font-size: 20px;
     align-items: center;
     
     transition: all 0.3s;
@@ -46,7 +46,6 @@ padding-bottom: 7.5em;
 
 .list-item{
     padding-top:1em;
-
     transition: all 0.3s ease-in-out;
 }
 .list-item:active{
@@ -59,8 +58,8 @@ padding-bottom: 7.5em;
     color: black;
     text-decoration: none;
 }
-.navbar a:hover{
-    
+.list-item:hover{
+    transform: scale(1.2,1.2);
     text-decoration: underline;
 }
 
@@ -75,9 +74,7 @@ padding-bottom: 7.5em;
 .menu-line-top{
  width:12.5px
 }
-.menu-line-mid{
 
-}
 .menu-line-bottom{
     width:12.5px
 }
@@ -108,21 +105,6 @@ padding-bottom: 7.5em;
     transform: rotate(45deg) translate(9px) translateY(-4.5px);
     
 }
-@keyframes midFlyOut {
-    0% {
-        transform: translate(10px);
-      }
-      30% {
-        transform: translate(20px);
-      }
-      100% {
-        transform: translate(4010px);
-        display: none;
-}
-}
-
-
-
 
 
 .logo{
@@ -159,11 +141,7 @@ padding-bottom: 7.5em;
    margin-top :0px;
    
 }
-.ethnocentric{
-    font-weight: 1;
-    font-family: 'Ethnocentric';
-    font-size: 42px;
-}
+
 .herotext p {
    font-size: 18px;
    color: #e5e7eb;  
@@ -207,7 +185,7 @@ padding-bottom: 7.5em;
     margin-top:1em;
     margin-bottom: 1em;
     width:100%;
-    
+    max-width: 600px;
 }
 
 /*End of hero styling*/
@@ -224,12 +202,15 @@ padding-bottom: 7.5em;
 .second{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #ececec;
     color: black;
     text-align: center;
     font-size: 1.5em;
     padding:0;
     margin: 0;
+    
 }
 
 .third{
@@ -246,15 +227,18 @@ text-align: left;
 font-size: 1.3rem;  
 font-weight: lighter;
 color: black;
+
 }
 .quote p{
     text-align: right;
     font-size: 16px;
 }
 .quote{
-    border: 1px solid #000000d3;
-    border-radius: 6px;
+    
+    border-top: 1px solid #000000d3;
     margin: 1em;
+    
+
 }
 .bottom-box{
     background-color: #ececec00;
@@ -298,10 +282,60 @@ color: black;
 }
 
 
-@media screen and (min-width: 769px) {
-    body{
+@media screen and (min-width: 768px) {
+    /*.herotext{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }*/
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) ;
+        
+    }
+
+    .quote{
+    
+        border: 1px solid #000000d3;
+        margin: 1em;
+        border-radius: 6px;
+    
+    }.menu{
         display: none;
     }
+    .nav-list{
+        position: relative;
+        top:0;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0;
+        margin-right: 2em;
+        gap: 2em;
+        padding: 0;
+        
+    }
+    .list-item{
+        padding: 0;
+        margin: 0;
+        transition: all 0.2s;
+    }
+    .logo{
+        margin-left: 2em;
+    }
+    .navbar{
+       
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        
+         
+    }
+    
+    
 }
 
   
