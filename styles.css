@@ -15,7 +15,6 @@ html {
     margin:0;
     padding:0; 
 }
-
 .navbar{
     background-color: #ececec;
     display:flex;
@@ -243,6 +242,7 @@ color: black;
     
     border-top: 1px solid #000000d3;
     margin: 1em;
+    max-width: 400px;
     
 
 }
