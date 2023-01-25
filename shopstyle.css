@@ -1,153 +1,310 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ben Bross Handmade</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="shortcut icon" type="image/x-icon" href="Images/logo.jpg" />
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-/>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="script.js" type="module" defer></script>
-</head>
-
-<body>
-  <header>
-    <nav class="navbar" id="navBar">
-
-      <div class="logo">
-        <a href="index.html"><img src="Images/logo.jpg" alt=""></a>
-      </div>
-
-      <ul class="nav-list" id="navList">
-        <li class="list-item">
-          <a href="shop.html">Shop</a>
-        </li>
-         <li class="list-item">
-          <a href="">About us</a>
-         </li>
-         <li class="list-item">
-          <a href="">Contact</a>
-         </li>
-         <li class="list-item">
-          <a href="">Support</a>
-         </li>
-      </ul>
-
-      <div class="menu" id="toggleBtn" >
-        <div class="menu-line-top menu-line" id="menuTop"></div>
-        <div class="menu-line-mid menu-line" id="menuMid"></div>
-        <div class="menu-line-bottom menu-line" id="menuBottom"></div>
-      </div>
-
-      
-  
-        
-
-        
-      
-          
-       
-
-    </nav>
-  </header>
-    <div class="herobox">
-      
-      <div class="herotext">
-        <div class="grid-element">
-          <h1>BEN BROSS HANDMADE</h1>
-        <p>Custom made leather accessories made from quality Italian leather.</p>
-
-        </div>
-        
-        <!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"><img src="Images/img1.jpg"></div>
-    <div class="swiper-slide"><img src="Images/img2.jpg"></div>
-    <div class="swiper-slide"><img src="Images/img3.jpg"></div>
-    <div class="swiper-slide"><img src="Images/img6.jpg"></div>
-    <div class="swiper-slide"><img src="Images/img7.jpg"></div>
+body {
+    font-family: 'Raleway', sans-serif;
     
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination" style= "color: #000000d3;"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev" style= "color: #000000d3;"></div>
-  <div class="swiper-button-next" style= "color: #000000d3;"></div>
-
-</div>
-
-
-        <button>Order now</button>
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        overflow-x:hidden;
         
-      </div>
-
-    </div>
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+  }
   
-  <div class="second"> 
-    <h2>Customer reviews</h2>
-    <div class="grid-container">
-    <div class="quote">
-      <blockquote >
-        "Custom wallet exceeded my expectations. Great quality and craftsmanship."
-        <p>-Customer</p>
-      </blockquote>
-      
-    </div>
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+html { 
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0; 
+}
+.navbar{
+    background-color: #ececec;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+    transition: all 0.3s;
+    
+}
+.nav-list{
+    list-style-type: none;
+    color: black;
+    width: 100%;
+    text-align: center;    
+    padding: 0;
+    margin-top: 0;
+    position: absolute;
+    top: 78px;
+    opacity: 0;
+    font-size: 17px;
+    
+}  
+.navbar-active{
+padding-bottom: 7.5em;
+}  
 
-    <div class="quote">
-      <blockquote >
-        "Custom tote was a hit as a gift, exceeded expectations and great customer service."
-        <p>-Customer</p>
-      </blockquote>
-      
-    </div>
+.active{
+    
+    transition: all 0.3s;
+    opacity: 1;
+}
 
-    <div class="quote">
-      <blockquote >
-        "I found a unique and personalized leather accessory, great customer service and product."
-        <p>-Customer</p>
-      </blockquote>
-      
-    </div>
+.list-item{
+    padding-top:1em;
+    transition: all 0.3s ease-in-out;
+}
+.list-item:active{
+    transform: scale(1.1,1.1);
+    transition: all 0.1s;
+    text-decoration: underline;
+}
 
-    <div class="quote">
-      <blockquote >
-        "Bought a leather keychain as a gift, it was loved, well-made and soft leather."
-        <p>-Customer</p>
-      </blockquote>
-    </div>
-    </div>
-  </div>
+.navbar a{
+    color: black;
+    text-decoration: none;
+    
+}
+.list-item:hover{
+    transform: scale(1.2,1.2);
+    text-decoration: underline;
+}
 
-<div class="third">
+.menu-line{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 4px;
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+.menu-line-top{
+ width:12.5px
+}
 
-<div class = "bottom-box">
-  <h3>Place your order now!</h3>
-  <p>Order a custom leather accesory by clicking the button right over there!</p>
-  <button>Order</button>
-</div>
-</div>
+.menu-line-bottom{
+    width:12.5px
+}
 
-<footer class="footer-box">
-  <div class="copyright">
-    <span>Copyright © BenBrossHandmade</span>
-  </div>
-</footer>
-</body>
+.menu{
+    display: block;
+    position: absolute;
+    right: 46px;
+    top: 46px;
+    
+}
+.menu:active{
+    transform: scale(1.1,1.1);
+    transition: all 0.3s;
+}
+.top-active{
+    transform: rotate(44deg);
+    padding: 0;
+    margin: 0;
+}
+.mid-active{
+    transform: rotate(-44deg) translate(-2.5px);
+    padding: 0;
+    margin: 0;
+}
+.bottom-active{
+    
+    transform: rotate(45deg) translate(9px) translateY(-4.5px);
+    
+}
 
-</html>
+
+.logo{
+    
+    margin-top: 0px;
+    mix-blend-mode: color-burn;
+    
+}
+.active-page{
+    text-decoration: underline;
+    font-weight: 600;
+}
+/*End of navigation bar styling*/
+
+
+.item-shop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 25px;
+    background-color: #000000d3;
+    
+
+}
+.item-shop h1{
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+    margin: 0;
+}
+.shop-image{
+
+    width: 100%;
+    max-width:  600px;
+}
+.image-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+.image-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+  }
+  .item-desc{
+    width: 100%;
+    padding:0;
+    margin: 0;
+    margin: 15px;
+    font-size: 1.3em;
+    color: white;
+
+
+  }
+
+  .item-price{
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+
+.cart-logo{
+    width: 10%;
+    mix-blend-mode: color-burn;
+    
+    top:15px;
+    right: 25px;
+    padding: 0;
+    margin: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+.grid-container button{
+    background-color:#00000000;
+    padding: 8px 20px;
+    font-size:18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #ececec ;
+    color:white;
+    transition: all 0.1s;
+}  
+
+.order-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*FOOTER STYLING*/
+
+.bottom-box{
+    background-color: #ececec00;
+    font-size:18px;
+    text-align: center;
+    transition: all 0.3s;
+    width: 100%;
+    width: fit-content;
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.bottom-box h3{
+    padding:0px;
+    margin:0px;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5em;
+}
+.bottom-box p{
+    padding:0px;
+    font-size: 1em;
+    margin: 1.2rem;
+    color: white;
+    
+}
+
+
+    
+.copyright span{
+    align-items: center;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ padding: 0.8em;
+ background-color: #ececec;
+    color:black;
+}
+
+@media screen and (min-width: 768px) {
+    
+    
+    .menu{
+        display: none;
+    }
+    .nav-list{
+        position: relative;
+        top:0;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0;
+        margin-right: 2em;
+        gap: 2em;
+        padding: 0;
+        
+    }
+    .list-item{
+        padding: 0;
+        margin: 0;
+        transition: all 0.2s;
+    }
+    .logo{
+        margin-left: 2em;
+    }
+    .navbar{
+       
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        
+         
+    }
+    
+    
+}
