@@ -155,7 +155,7 @@ padding-bottom: 7.5em;
 .shop-image{
 
     width: 100%;
-    max-width:  600px;
+    
 }
 .image-container{
     display: flex;
@@ -193,36 +193,39 @@ padding-bottom: 7.5em;
     font-weight: 500;
   }
 
-.cart-logo{
-    width: 10%;
-    mix-blend-mode: color-burn;
-    
-    top:15px;
-    right: 25px;
-    padding: 0;
-    margin: 0;
-}
+
 .grid-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
 }
 .grid-container button{
-    background-color:#00000000;
+    background-color:#254af0;
     padding: 8px 20px;
     font-size:18px;
-    font-weight: bold;
+    
     text-align: center;
-    border-radius: 8px;
-    border: 1px solid #ececec ;
+    border-radius: 6px;
+    border: none;
     color:white;
-    transition: all 0.1s;
+    transition: all 0.3s;
+}
+.grid-container button:hover{
+    transition: all 0.3s;
+    transform: scale(1.1,1.1);
+    padding: 10px 22px
 }  
 
 .order-button-container{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.card-grid-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /*FOOTER STYLING*/
@@ -268,6 +271,7 @@ padding-bottom: 7.5em;
     color:black;
 }
 
+
 @media screen and (min-width: 768px) {
     
     
@@ -305,6 +309,23 @@ padding-bottom: 7.5em;
         
          
     }
+    .card-grid-container{
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        gap: 25px;
+        
+    }
+    .image-container{
+        width: 100%;
+    }
+    .item-shop{
+        padding: 25px;
+    }
+    .item-shop h1{
+        padding: 0;}
+
     
     
 }
