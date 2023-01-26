@@ -158,6 +158,7 @@ padding-bottom: 7.5em;
     max-width: 600px;
     margin: 0;
     padding: 0;
+    transition: all 0.3s;
 }
 .category-image{
     margin: 0;
@@ -172,10 +173,18 @@ padding-bottom: 7.5em;
     font-size: 2em;
     font-weight: 600;
 }
-.category-image:active{
-    filter: blur(2px);
-    transform: scale(1.1,1.1);
+.category-card:hover{
+    transform: scale(1.02,1.02);
+    transition: all 0.3s;
+    
+}
+.category-image:hover{
+    filter: blur(0.7px);
     transition: all 0.1s;
+}
+.category-card:active{
+transform: scale(0.9,0.9);
+transition: all 0.3s;
 }
 a{
     margin: 0;
