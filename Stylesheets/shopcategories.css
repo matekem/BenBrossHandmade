@@ -50,7 +50,42 @@ html {
 }  
 .navbar-active{
 padding-bottom: 7.5em;
-}  
+} 
+.back-arrow{
+    display: block;
+    position: absolute;
+    left: 46px;
+    top: 46px;
+}
+.arrow-top-line{
+    width: 10px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    transform: rotate(-40deg) translateY(0px) translateX(-1px);
+    transition: all 0.3s;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    
+}
+.arrow-mid-line{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    transition: all 0.3s;
+    
+}
+.arrow-bottom-line{
+    width: 10px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    transform: rotate(40deg) translateY(0px) translateX(-1px);
+    transition: all 0.3s;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    
+} 
 
 .active{
     
@@ -99,7 +134,7 @@ padding-bottom: 7.5em;
     display: block;
     position: absolute;
     right: 46px;
-    top: 46px;
+    top: 42px;
     
 }
 .menu:active{
@@ -210,6 +245,11 @@ a{
 }
 
 @media screen and (min-width: 768px) {
+    
+    .back-arrow{
+        display: none;
+    }
+
     .menu{
         display: none;
     }
