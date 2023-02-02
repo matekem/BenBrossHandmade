@@ -210,17 +210,7 @@ padding-bottom: 7.5em;
     font-weight: 600;
     transition: all 0.3s;
 }
-.category-card:hover{
-    transform: scale(1.02,1.02);
-    transition: all 0.3s;
 
-}
-.category-image:hover {
-    
-    transition: all 0.2s;
-    filter: brightness(0.6)  blur(1px);
-    
-}
 .category-image:hover + .text-on-image{
     transition: all 0.3s;
     font-size: 2.3em;
@@ -246,6 +236,11 @@ a{
 
 @media screen and (min-width: 768px) {
     
+    .list-item > a {
+        font-size: 1.2em;
+        font-weight: 500;
+      }
+
     .back-arrow{
         display: none;
     }
@@ -308,6 +303,18 @@ a{
     .category-image{
         width: 100%;
         max-width: 600px;
+    }
+
+    .category-card:hover{
+        transform: scale(1.02,1.02);
+        transition: all 0.3s;
+    
+    }
+    .category-image:hover {
+        
+        transition: all 0.2s;
+        filter: brightness(0.6)  blur(1px);
+        
     }
      
     

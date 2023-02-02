@@ -319,6 +319,10 @@ padding-bottom: 7.5em;
 
 @media screen and (min-width: 768px) {
     
+    .list-item > a {
+        font-size: 1.2em;
+        font-weight: 500;
+      }
     
     .menu{
         display: none;
