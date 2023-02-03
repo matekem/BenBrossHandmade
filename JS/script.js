@@ -38,7 +38,7 @@ const swiper = new Swiper('.swiper', {
 
     //Set delay between automatic slide changes
     autoplay:{
-      delay: 4000,
+      delay: 2500,
     },
     effect: 'fade',
   fadeEffect: {
