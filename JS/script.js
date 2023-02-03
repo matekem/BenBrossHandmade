@@ -38,8 +38,12 @@ const swiper = new Swiper('.swiper', {
 
     //Set delay between automatic slide changes
     autoplay:{
-      delay: 2200,
+      delay: 4000,
     },
+    effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
   });
 
   swiper.setTransition(swiper,2)
