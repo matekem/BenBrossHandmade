@@ -1,5 +1,5 @@
 body {
-  font-family: "Raleway", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 
   margin: 0;
   padding: 0;
@@ -182,12 +182,14 @@ html {
   padding: 25px;
 }
 .herotext button:hover,
-.bottom-box button:hover {
+.bottom-box button:hover,
+.featured-btn:hover {
   transition: all 0.3s;
   transform: scale(1.1, 1.1);
 }
 .herotext button:active,
-.bottom-box button:active {
+.bottom-box button:active,
+.featured-btn:active {
   transition: all 0.1s;
   transform: scale(1, 1);
 }
@@ -200,22 +202,86 @@ html {
 }
 
 /*End of hero styling*/
+.featured-header{
+    color: white;
+}
+
+.featured-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.featured-grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    row-gap: 15px;
+    width: 95%
+}
+.featured-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:2px;
+    margin-bottom: 15px ;
+    transition: all 0.3s;
+}
+.featured-item > img{
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    width: 95%;
+    
+}
+
+
+.featured-item-name{
+    margin: 0;
+    padding:0;
+    
+    color: white;
+    font-size: 1em;
+}
+.featured-item-price{
+    font-size: 0.9em;
+    margin: 0;
+    padding:0;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.featured-btn{
+    margin-top: 15px;
+    margin-bottom: 35px;
+    background-color: #3882f6;
+    padding: 8px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    transition: all 0.1s;
+}
 
 .second {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #2c2c2c;
-  color: white;
+  background-color: #ececec;
+  color: black;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding: 0;
   margin: 0;
-  padding-top: 35px;
+  padding-top: 15px;
 }
 .second h2 {
   margin: 0;
+  font-size: 1.5em;
 }
 
 .third {
@@ -230,14 +296,14 @@ html {
   text-align: left;
   font-size: 1.3rem;
   font-weight: lighter;
-  color: white;
+  color: black;
 }
 .quote p {
   text-align: right;
   font-size: 16px;
 }
 .quote {
-  border-top: 1px solid white;
+  border-bottom: 1px solid black;
   margin: 1em;
   max-width: 400px;
 }
@@ -293,7 +359,7 @@ html {
   }
 
   .quote {
-    border: 1px solid white;
+    border: 1px solid black;
     margin: 1em;
     border-radius: 6px;
   }
@@ -350,4 +416,19 @@ html {
   .herotext p {
     display: none;
   }
+  .featured-header{
+    font-size: 2em;
+  }
+  .featured-grid-container{
+    grid-template-columns: repeat(4,1fr);
+    width: 85%
+  }
+  .featured-item > img{
+    width: 85%;
+  }
+  .featured-item:hover{
+    cursor: pointer;
+    transform: scale(1.05,1.05);
+    transition: all 0.3s;
+}
 }
