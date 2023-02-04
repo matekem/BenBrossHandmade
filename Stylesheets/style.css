@@ -274,6 +274,18 @@ html {
   margin: 0;
   font-size: 1.5em;
 }
+#instafeed-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 0px;
+}
+
+#instafeed-container  img{
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
 
 .third {
   display: flex;
