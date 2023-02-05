@@ -17,6 +17,11 @@ html {
   padding: 0;
 }
 
+.active-page{
+  font-size:18px ;
+  font-weight: 600;
+}
+
 .navbar {
   overflow: hidden;
   background-color: #ececec;
@@ -41,7 +46,7 @@ html {
   font-size: 17px;
 }
 .navbar-active {
-  padding-bottom: 7.5em;
+  padding-bottom: 7.7em;
 }
 
 .active {
@@ -345,12 +350,17 @@ html {
   background-color: #ececec;
   color: black;
 }
+.last-quote{
+  border: none;
+}
 
 @media screen and (min-width: 768px) {
   .herobox {
     width: 100%;
   }
-
+  .last-quote{
+    border: 1px solid black;
+  }
   .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

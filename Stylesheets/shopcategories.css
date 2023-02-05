@@ -49,7 +49,7 @@ html {
     
 }  
 .navbar-active{
-padding-bottom: 7.5em;
+padding-bottom: 7.7em;
 } 
 .back-arrow{
     display: block;
@@ -165,9 +165,9 @@ padding-bottom: 7.5em;
     
 }
 .active-page{
-    text-decoration: underline;
+    font-size:18px ;
     font-weight: 600;
-}
+  }
 
 
 /*End of navigation bar styling*/

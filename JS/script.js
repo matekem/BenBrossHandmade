@@ -4,6 +4,7 @@ const topMenuLine = document.getElementById("menuTop")
 const midMenuLine = document.getElementById("menuMid")
 const bottomMenuLine = document.getElementById("menuBottom")
 const navBar = document.getElementById("navBar")
+const featuredItems = document.querySelectorAll("#featuredItem")
 
 toggleBtn.addEventListener("click", () =>{
    
@@ -14,6 +15,10 @@ toggleBtn.addEventListener("click", () =>{
     navBar.classList.toggle("navbar-active")
 })
 
+/*document.body.addEventListener("click", () => {
+  for(const item of featuredItems)
+  item.classList.add("scroll-style")
+})*/
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
