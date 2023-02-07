@@ -17,10 +17,7 @@ html {
   padding: 0;
 }
 
-.active-page{
-  font-size:18px ;
-  font-weight: 600;
-}
+
 
 .navbar {
   overflow: hidden;
@@ -46,7 +43,7 @@ html {
   font-size: 17px;
 }
 .navbar-active {
-  padding-bottom: 7.7em;
+  padding-bottom: 9.5em;
 }
 
 .active {
@@ -57,6 +54,7 @@ html {
 .list-item {
   padding-top: 1em;
   transition: all 0.3s ease-in-out;
+
 }
 .list-item:active {
   transform: scale(1.1, 1.1);
@@ -67,6 +65,9 @@ html {
 .navbar a {
   color: black;
   text-decoration: none;
+}
+.active-page{
+  font-weight: 600;
 }
 .list-item:hover {
   transform: scale(1.2, 1.2);
@@ -396,12 +397,12 @@ html {
     margin: 0;
     transition: all 0.2s;
   }
-  .list-item > a {
-    font-size: 1.2em;
-    font-weight: 500;
-  }
+ 
   .logo {
     margin-left: 2em;
+  }
+  .list-item{
+    font-size: 20px;
   }
   .navbar {
     display: flex;
